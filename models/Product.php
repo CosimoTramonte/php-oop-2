@@ -6,7 +6,7 @@ class Product{
     private $name;
     private $brand;
     private $price;
-    private $typology;
+    private $typology = [];
 
     // function __construct($_image, $_name, $_brand, $_price, Typology $_typology){
     //     $this->setImage($_image);
@@ -49,7 +49,7 @@ class Product{
         return $this->brand;
     }
     public function getPrice(){
-        return $this->price;
+        return $this->price . "$";
     }
     public function getTypology(){
         return $this->typology;
