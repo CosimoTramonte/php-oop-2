@@ -1,18 +1,26 @@
 <?php
 
+
 class Product{
     private $image;
     private $name;
     private $brand;
     private $price;
+    private $typology;
 
-    function __construct($_image, $_name, $_brand, $_price){
-        $this->setImage($_image);
+    // function __construct($_image, $_name, $_brand, $_price, Typology $_typology){
+    //     $this->setImage($_image);
+    //     $this->setName($_name);
+    //     $this->setBrand($_brand);
+    //     $this->setPrice($_price);
+    //     $this->setTypology($_typology);
+    // }
+
+    function __construct($_name = null){
         $this->setName($_name);
-        $this->setBrand($_brand);
-        $this->setPrice($_price);
     }
 
+    //set
     public function setImage($_image){
         $this->image = $_image;
     }
@@ -25,7 +33,12 @@ class Product{
     public function setPrice($_price){
         $this->price = $_price;
     }
+    public function setTypology($_typology){
+        $this->typology = $_typology;
+    }
+    
 
+    //get
     public function getImage(){
         return $this->image;
     }
@@ -37,6 +50,9 @@ class Product{
     }
     public function getPrice(){
         return $this->price;
+    }
+    public function getTypology(){
+        return $this->typology;
     }
 }
 
