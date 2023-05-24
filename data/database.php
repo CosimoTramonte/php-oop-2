@@ -5,7 +5,7 @@ $prod1->setImage("img/prod1.jpg");
 $prod1->setBrand("Royal Canin");
 $prod1->setPrice(20);
 $prod1->setTypology(["cane"]);
-$prod1->setTaste("carne");
+$prod1->setTaste(["carne"]);
 $prod1->setWeight(5);
 
 $prod2 = new Food("Le Ghiottonerie in Gelatina");
@@ -13,7 +13,7 @@ $prod2->setImage("img/prod2.jpg");
 $prod2->setBrand("Felix");
 $prod2->setPrice(35);
 $prod2->setTypology(["gatto"]);
-$prod2->setTaste("pesce");
+$prod2->setTaste(["pesce"]);
 $prod2->setWeight(2);
 
 $prod3 = new Food("Mini patè con Agnello");
@@ -21,7 +21,7 @@ $prod3->setImage("img/prod3.jpg");
 $prod3->setBrand("Migliorcane");
 $prod3->setPrice(5);
 $prod3->setTypology(["cane", "gatto"]);
-$prod3->setTaste("agnello");
+$prod3->setTaste(["agnello"]);
 $prod3->setWeight(1);
 
 $prod4 = new Food("Bocconi con Pollo e Tacchino");

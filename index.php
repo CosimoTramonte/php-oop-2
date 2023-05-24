@@ -25,7 +25,7 @@ $arrayProducts = [
 // var_dump($prod6);
 // var_dump($prod7);
 // var_dump($prod8);
-
+var_dump(get_class($prod8));
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +55,15 @@ $arrayProducts = [
 
                     <h4><?php echo $product->getPrice() ?></h4>
 
+                    <?php  if(get_class($product) === "Food") : ?>
+                        <p>Gusto: <?php echo implode(",", $product->getTaste()) ?></p>
+                        <p><?php echo $product->getWeight() ?> Kg</p>
+                    <?php endif; ?>
+
+                    <?php  if(get_class($product) === "Toy") : ?>
+                        <p>Materiale: <?php echo $product->getMaterial() ?></p>
+                        <p><?php echo $product->getColor() ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endforeach; ?>
